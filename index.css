@@ -1,0 +1,91 @@
+body {
+    background-image: url("basketball.jpg");
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    background: rgb(51, 118, 136);
+    width: 40%;
+    max-width: 800px;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    flex: 1 1 200px;
+}
+
+.score-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.score-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.score-btn:hover {
+    background-color: #f0f0f0;
+}
+
+#home-score, #guest-score {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.score-separator {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .scoreboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .score-separator {
+        display: none;
+    }
+
+    .team {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #home-score, #guest-score {
+        font-size: 36px;
+    }
+
+    .score-controls {
+        gap: 5px;
+    }
+
+    .score-btn {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
